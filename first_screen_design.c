@@ -1,15 +1,14 @@
-#include "ticket.h"
+#include "first_screen_design.h"
+#include "main.h"
 
-enum { black, blue, green, cyan, red, purple, brown, lightgray, darkgray, lightblue, lightgreen, lightcyan, lightred, lightpurple, yellow, white };
-
-void setColor(int forground, int back) {
+int setColor(int forground, int back) {
 	HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
 	int code = forground + back * 16;
 	SetConsoleTextAttribute(consoleHandle, code);
 }
 
 void init() {
-	system("mode con cols=130 lines=40 | title SKT");
+	system("mode con cols=120 lines=40 | title SKT");
 }
 
 void titleDraw() {

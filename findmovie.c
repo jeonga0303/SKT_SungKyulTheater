@@ -1,51 +1,33 @@
-#include "ticket.h"
-
-void movieinformation(){
-		char ch;
-		FILE * fp = fopen("무비차트.txt", "r");
-		if (fp == NULL) {
-			printf("파일 오픈 실패 !\n");
-			return -1;
-		}
-		printf("*:*:*:*:*:*:이 달의 영화:*:*:*:*:*:*\n");
-		while (1) {
-			ch = fgetc(fp);
-			if (ch == EOF)
-				break;
-			putchar(ch);
-		}
-		printf("\n\n");
-		printf("영화의 정보를 알아보시겠습니까?(Y/N) ");
-		if (getYesNoKey()) {
-			system("cls");
-			mselectprint();
-		}
-		else
-			printf("예매하기창으로 넘어갑니다.");
-		fclose(fp);
-		Sleep(1000);
-		return 0;
-	}
+#include "main.h"
+#include "findmovie.h"
 
 void mselectprint() {
 	while (1) {
-		printf("\n\n");
-		printf(" 알아볼 영화를 선택해주세요.");
+		printf("\n");
+		setColor(yellow, black);
+		printf(":*:*:*:*:*:*:*:*:*:*:*:*:*:*:*\n*:");
+		setColor(lightgray, black);
+		printf("알아볼 영화를 선택해주세요");
+		setColor(yellow, black);
+		printf(":*\n:*:*:*:*:*:*:*:*:*:*:*:*:*:*:*\n");
+		setColor(lightgray, black);
 		int mselectcode = mselectDraw();
 		printf("\n\n");
 		int n;
 		n = mselectcode;
 		switch (n) {
 		case 0:
+			setColor(lightblue, white);
 			infoprint(n);
 			break;
 		case 1:
+			setColor(black, white);
 			infoprint(n);
 			break;
 		case 2:
+			setColor(lightred, white);
 			infoprint(n);
 			break;
-
 		}
 
 		printf("\n\n");
@@ -54,10 +36,10 @@ void mselectprint() {
 			continue;
 		else {
 			system("cls");
-			printf("예매하기창으로넘어갑니다.");
+			setColor(lightgray, black);
+			printf(" 영화 예매 시스템을 시작하겠습니다...잠시만 기다려주세요");
 			break;
 		}
-
 	}
 }
 
@@ -65,6 +47,7 @@ int selectDraw() {
 	int x = 10;
 	int y = 10;
 	gotoxy(x - 2, y);
+	setColor(lightgray, black);
 	printf(">    더 알아보기");
 	gotoxy(x, y + 1);
 	printf("   끝내기");
@@ -173,10 +156,50 @@ void infoprint(int n) {
 	arr[2].grade = 8.94;
 	printf(" [%s]\n", arr[n].name);
 	printf("** %s\n", arr[n].intro);
-	printf("-------- 영화 순위 : %d위\n", arr[n].ranking);
-	printf("-------- 관람 시간 : %d분\n", arr[n].mtime);
-	printf("-------- 관람 이용가 : %s\n", arr[n].rate);
-	printf("-------- 영화 장르 : %s\n", arr[n].style);
-	printf("-------- 영화 평점 : %.2f\n", arr[n].grade);
+	setColor(lightgray, black);
+	printf("-------- 영화 순위 : %d위       \n", arr[n].ranking);
+	printf("-------- 관람 시간 : %d분       \n", arr[n].mtime);
+	printf("-------- 관람 이용가 : %s       \n", arr[n].rate);
+	printf("-------- 영화 장르 : %s         \n", arr[n].style);
+	printf("-------- 영화 평점 : %.2f       \n", arr[n].grade);
 	printf("\n\n");
+}
+
+int movieinformation() {
+	char ch;
+	FILE * fp = fopen("무비차트.txt", "r");
+	if (fp == NULL) {
+		printf("파일 오픈 실패 !\n");
+		return -1;
+	}
+	setColor(yellow, black);
+	printf("*:*");
+	setColor(lightred, black);
+	printf("<이 달의 영화>");
+	setColor(yellow, black);
+	printf("*:*:*:*:*:*");
+	setColor(lightred, black);
+	printf("<예매율>\n");
+	setColor(yellow, black);
+	while (1) {
+		ch = fgetc(fp);
+		if (ch == EOF)
+			break;
+		putchar(ch);
+	}
+	setColor(white, black);
+	printf("\n\n");
+	setColor(lightgray, black);
+	printf("영화의 정보를 알아보시겠습니까?(Y/N) ");
+	if (getYesNoKey()) {
+		system("cls");
+		mselectprint();
+	}
+	else {
+		printf("\n\n");
+		printf("영화 예매 시스템을 시작하겠습니다...잠시만 기다려주세요");
+	}
+	fclose(fp);
+	Sleep(1000);
+	return 0;
 }

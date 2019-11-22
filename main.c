@@ -1,11 +1,12 @@
-#include "ticket.h" 
-
+#include "main.h" 
 
 int main() {
 	int timekey, Adnumber;// Adnumber => 예매번호
 	int datekey2;
 	int price = 0;
+	
 	movieinformation();
+	
 	while (1)
 	{
 		init();
@@ -14,7 +15,7 @@ int main() {
 		
 		system("cls");
 
-		int moviekey = movechart(menucode);
+		int moviekey = movieselect(menucode);
 		system("cls");
 
 		if (menucode == 0) { //예매하기
