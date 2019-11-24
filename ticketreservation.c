@@ -103,7 +103,7 @@ int reservation(int *datecode, int *timekey, int *date_key2, int movie_key) {
 			printf("b4 b5 b6\n");
 			printf("c7 c8 c9\n\n");;
 			setColor(lightgray, black);
-			printf("잠시만 기다려주세요. 곧 예매 페이지로 넘어갑니다...");
+			printf("잠시만 기다려주세요. 곧 예매 페이지로 넘어갑니다.");
 			_sleep(1000);
 			system("cls");
 
@@ -199,7 +199,7 @@ int SeatsChange(int code, int *seatkey_a, int *seatkey_b, int *seatkey_c) {
 			(*seatkey_a)++;
 		}
 		else
-			printf("이미예약된 좌석입니다. 다시 선택해 주십시오.");
+			printf("이미 예약된 좌석입니다. 다시 선택해 주십시오.");
 	}
 	else if (code == 1) {
 		if (seats_num[0][1] == 0) {
@@ -208,7 +208,7 @@ int SeatsChange(int code, int *seatkey_a, int *seatkey_b, int *seatkey_c) {
 			(*seatkey_a)++;
 		}
 		else
-			printf("이미예약된 좌석입니다. 다시 선택해 주십시오.");
+			printf("이미 예약된 좌석입니다. 다시 선택해 주십시오.");
 	}
 	else if (code == 2) {
 		if (seats_num[0][2] == 0) {
@@ -217,7 +217,7 @@ int SeatsChange(int code, int *seatkey_a, int *seatkey_b, int *seatkey_c) {
 			(*seatkey_a)++;
 		}
 		else
-			printf("이미예약된 좌석입니다. 다시 선택해 주십시오.");
+			printf("이미 예약된 좌석입니다. 다시 선택해 주십시오.");
 	}
 	else if (code == 3) {
 		if (seats_num[1][0] == 0) {
@@ -226,7 +226,7 @@ int SeatsChange(int code, int *seatkey_a, int *seatkey_b, int *seatkey_c) {
 			(*seatkey_b)++;
 		}
 		else
-			printf("이미예약된 좌석입니다. 다시 선택해 주십시오.");
+			printf("이미 예약된 좌석입니다. 다시 선택해 주십시오.");
 	}
 	else if (code == 4) {
 		if (seats_num[1][1] == 0) {
@@ -235,7 +235,7 @@ int SeatsChange(int code, int *seatkey_a, int *seatkey_b, int *seatkey_c) {
 			(*seatkey_b)++;
 		}
 		else
-			printf("이미예약된 좌석입니다. 다시 선택해 주십시오.");
+			printf("이미 예약된 좌석입니다. 다시 선택해 주십시오.");
 	}
 	else if (code == 5) {
 		if (seats_num[1][2] == 0) {
@@ -244,7 +244,7 @@ int SeatsChange(int code, int *seatkey_a, int *seatkey_b, int *seatkey_c) {
 			(*seatkey_b)++;
 		}
 		else
-			printf("이미예약된 좌석입니다. 다시 선택해 주십시오.");
+			printf("이미 예약된 좌석입니다. 다시 선택해 주십시오.");
 	}
 	else if (code == 6) {
 		if (seats_num[2][0] == 0) {
@@ -253,7 +253,7 @@ int SeatsChange(int code, int *seatkey_a, int *seatkey_b, int *seatkey_c) {
 			(*seatkey_c)++;
 		}
 		else
-			printf("이미예약된 좌석입니다. 다시 선택해 주십시오.");
+			printf("이미 예약된 좌석입니다. 다시 선택해 주십시오.");
 	}
 	else if (code == 7) {
 		if (seats_num[2][1] == 0) {
@@ -262,7 +262,7 @@ int SeatsChange(int code, int *seatkey_a, int *seatkey_b, int *seatkey_c) {
 			(*seatkey_c)++;
 		}
 		else
-			printf("이미예약된 좌석입니다. 다시 선택해 주십시오.");
+			printf("이미 예약된 좌석입니다. 다시 선택해 주십시오.");
 	}
 	else if (code == 8) {
 		if (seats_num[2][2] == 0) {
@@ -271,7 +271,7 @@ int SeatsChange(int code, int *seatkey_a, int *seatkey_b, int *seatkey_c) {
 			(*seatkey_c)++;
 		}
 		else
-			printf("이미예약된 좌석입니다. 다시 선택해 주십시오.");
+			printf("이미 예약된 좌석입니다. 다시 선택해 주십시오.");
 	}
 }
 
@@ -396,7 +396,9 @@ int reservationtime(int count[])
 	int y = 2;
 
 	gotoxy(x, y - 2);
-	printf(" [영화시간대]");
+	setColor(yellow, black);
+	printf("● 관람하실 시간대를 선택해주세요.\n");
+	setColor(lightgray, black);;
 	gotoxy(x, y);
 	printf("> *8:30 (%d/9)", count[0]);
 	gotoxy(x, y + 2);
@@ -475,7 +477,7 @@ int movieselect(int i)
 		printf(":*:*:*:*:*:예매할 영화를 선택해주세요*:*:*:*:*:\n");
 		setColor(lightgray, black);
 		gotoxy(x, y + 1);
-		printf(">1.겨울왕국2\n");
+		printf(">1.겨울왕국\n");
 		gotoxy(x, y + 2);
 		printf(" 2. 블랙머니\n");
 		gotoxy(x, y + 3);
@@ -615,34 +617,19 @@ int sprint3() {
 }
 
 int seatsprint() {
-	int i;
 	char A[3] = { 'A','B','C' }; //알파펫 출력
 	int d[3] = { 1,2,3 };         //숫자 출력
 	int x = 3;
 	int y = 2;
 	gotoxy(x, y);
-	setColor(red, white);
-	for (int j = 0; j < 3; j++) {
-		printf("%d ", seats_num[i][j]);
-	}      
-	setColor(white, black);
-	printf("\n   ");
-	i++;
-	setColor(green, white);
-	for (int j = 0; j < 3; j++) {
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
 
-		printf("%d ", seats_num[i][j]);
-	}      
-	setColor(white, black);
-	printf("\n   ");
-	i++;
-	setColor(purple, white);
-	for (int j = 0; j < 3; j++) {
-
-		printf("%d ", seats_num[i][j]);
+			printf("%d ", seats_num[i][j]);
+		}
+		printf("\n   ");
 	}
-	setColor(white, black);
-	printf("\n   ");
+
 
 	gotoxy(x - 2, y);
 	for (int p = 0; p < 3; p++)
