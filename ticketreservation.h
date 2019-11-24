@@ -1,10 +1,20 @@
 #ifndef RESERVATION_H
 #define RESERVATION_H
-
+ 
 #define PRICE 10000
 #define TIMESALE 3000
 #define SEATSALE 1000
 #define TIMESIZE 5
+
+#define TIMESALE_ORIGINAL_PRICE(x,y,z) ((x+y+z)*PRICE)
+#define TIMESALE_SALEPRICE_PRICE(x,y,z) ((x*(TIMESALE+(2*SEATSALE)))+(y*(TIMESALE+SEATSALE))+(z*TIMESALE))
+#define TIMESALE_FINALPRICE_PRICE(x,y,z) (((x+y+z)*PRICE)-((x*(TIMESALE+(2*SEATSALE)))+(y*(TIMESALE+SEATSALE))+(z*TIMESALE)))
+
+
+#define SEATSALE_ORIGINAL_PRICE(x,y,z)  ((x + y +z) * (PRICE))
+#define SEATSALE_SALEPRICE_PRICE(x,y,z) ((x*2*SEATSALE)+(y*SEATSALE))
+#define SEATSALE_FINALPRICE_PRICE(x,y,z) (((x+y+z)*PRICE)-((x*2*SEATSALE)+(y*SEATSALE)))
+
 
 #endif
 
@@ -20,7 +30,6 @@ int sprint3();                          //reservation   1,2,3값
 int payprint_1(int, int, int);        //조조(시간)할인이랑 좌석할인 함수,reservation 포함
 int payprint_2(int, int, int);        //좌석할인 함수,reservation 포함
 int seatsprint();                      //좌석표전체출력 reservation 포함
-
 
 
 
