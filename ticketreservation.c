@@ -21,7 +21,9 @@ int reservation(int *datecode, int *timekey, int *date_key2, int movie_key) {
 
 	while (1)
 	{
-		printf("날짜를 입력해주십시오.(ex 20191101) ");
+		setColor(yellow, black);
+		printf("● 예매할 날짜를 입력해주세요. ex)20191101 : ");
+		setColor(lightgray, black);
 		scanf("%d", &date);
 		cmpdate = date / 100;
 
@@ -73,7 +75,7 @@ int reservation(int *datecode, int *timekey, int *date_key2, int movie_key) {
 			case 8:
 				if (count[3] >= 9) {
 					system("cls");
-					printf("꽉 찼좌석이 매진되었습니다. 다시 예매해주세요.\n");
+					printf("매진되었습니다. 다시 예매해주세요.\n");
 					Sleep(1000);
 					continue;
 				}
@@ -95,11 +97,13 @@ int reservation(int *datecode, int *timekey, int *date_key2, int movie_key) {
 				break;
 
 			}
+			setColor(lightred, black);
 			printf("좌석번호\n");
 			printf("a1 a2 a3\n");
 			printf("b4 b5 b6\n");
-			printf("c7 c8 c9\n\n");
-			printf("잠시만 기다려주세요. 곧 예매 페이지로 넘어갑니다.");
+			printf("c7 c8 c9\n\n");;
+			setColor(lightgray, black);
+			printf("잠시만 기다려주세요. 곧 예매 페이지로 넘어갑니다...");
 			_sleep(1000);
 			system("cls");
 
@@ -322,7 +326,9 @@ int dateprint()
 	int sum = 0;
 	int chk = 0;
 	int basicyear[12] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
-	printf("출력할 년,달 입력 ex)2019 11 : ");
+	setColor(yellow, black);
+	printf("● 예매할 년도와 달을 입력해주세요. ex)2019 11 : ");
+	setColor(lightgray, black);
 	scanf("%d %d", &year, &month);
 
 
@@ -465,9 +471,11 @@ int movieselect(int i)
 
 		system("cls");
 		gotoxy(x, y);
-		printf(" <이번달의 영화>");
+		setColor(yellow, black);
+		printf(":*:*:*:*:*:예매할 영화를 선택해주세요*:*:*:*:*:\n");
+		setColor(lightgray, black);
 		gotoxy(x, y + 1);
-		printf(">1.겨울왕국\n");
+		printf(">1.겨울왕국2\n");
 		gotoxy(x, y + 2);
 		printf(" 2. 블랙머니\n");
 		gotoxy(x, y + 3);
@@ -607,19 +615,34 @@ int sprint3() {
 }
 
 int seatsprint() {
+	int i;
 	char A[3] = { 'A','B','C' }; //알파펫 출력
 	int d[3] = { 1,2,3 };         //숫자 출력
 	int x = 3;
 	int y = 2;
 	gotoxy(x, y);
-	for (int i = 0; i < 3; i++) {
-		for (int j = 0; j < 3; j++) {
+	setColor(red, white);
+	for (int j = 0; j < 3; j++) {
+		printf("%d ", seats_num[i][j]);
+	}      
+	setColor(white, black);
+	printf("\n   ");
+	i++;
+	setColor(green, white);
+	for (int j = 0; j < 3; j++) {
 
-			printf("%d ", seats_num[i][j]);
-		}
-		printf("\n   ");
+		printf("%d ", seats_num[i][j]);
+	}      
+	setColor(white, black);
+	printf("\n   ");
+	i++;
+	setColor(purple, white);
+	for (int j = 0; j < 3; j++) {
+
+		printf("%d ", seats_num[i][j]);
 	}
-
+	setColor(white, black);
+	printf("\n   ");
 
 	gotoxy(x - 2, y);
 	for (int p = 0; p < 3; p++)
