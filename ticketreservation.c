@@ -622,13 +622,28 @@ int seatsprint() {
 	int x = 3;
 	int y = 2;
 	gotoxy(x, y);
-	for (int i = 0; i < 3; i++) {
-		for (int j = 0; j < 3; j++) {
+	int i;
+	i = 0;
+	setColor(lightred, white);
+	for (int j = 0; j < 3; j++) {
+		printf("%d ", seats_num[i][j]);
+	}      setColor(white, black);
+	printf("\n   ");
+	i++;
+	setColor(green, white);
+	for (int j = 0; j < 3; j++) {
 
-			printf("%d ", seats_num[i][j]);
-		}
-		printf("\n   ");
+		printf("%d ", seats_num[i][j]);
+	}      setColor(white, black);
+	printf("\n   ");
+	i++;
+	setColor(purple, white);
+	for (int j = 0; j < 3; j++) {
+
+		printf("%d ", seats_num[i][j]);
 	}
+	setColor(white, black);
+	printf("\n   ");
 
 
 	gotoxy(x - 2, y);
@@ -638,6 +653,7 @@ int seatsprint() {
 	gotoxy(x, y - 1);
 	for (int q = 0; q < 3; q++)
 		printf("%d ", d[q]);
+
 
 }
 
