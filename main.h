@@ -47,7 +47,7 @@
 #ifndef SET_COLOR
 #define SET_COLOR
 
-int setColor();                         //���� �ٲ��ִ� �Լ�
-enum { black, blue, green, cyan, red, purple, brown, lightgray, darkgray, lightblue, lightgreen, lightcyan, lightred, lightpurple, yellow, white };
+int setColor();                         //¹è°æ»ö ¹Ù²ãÁÖ´Â ÇÔ¼ö
 
 #endif
+enum { black, blue, green, cyan, red, purple, brown, lightgray, darkgray, lightblue, lightgreen, lightcyan, lightred, lightpurple, yellow, white };
