@@ -21,7 +21,9 @@ int reservation(int *datecode, int *timekey, int *date_key2, int movie_key) {
 
 	while (1)
 	{
+		setColor(yellow, black);
 		printf("날짜를 입력해주십시오.(ex 20191101) ");
+		setColor(lightgray, black);
 		scanf("%d", &date);
 		cmpdate = date / 100;
 
