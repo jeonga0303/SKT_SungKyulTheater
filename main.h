@@ -48,6 +48,6 @@
 #define SET_COLOR
 
 int setColor();                         //¹è°æ»ö ¹Ù²ãÁÖ´Â ÇÔ¼ö
+enum { black, blue, green, cyan, red, purple, brown, lightgray, darkgray, lightblue, lightgreen, lightcyan, lightred, lightpurple, yellow, white };
 
 #endif
-enum { black, blue, green, cyan, red, purple, brown, lightgray, darkgray, lightblue, lightgreen, lightcyan, lightred, lightpurple, yellow, white };
