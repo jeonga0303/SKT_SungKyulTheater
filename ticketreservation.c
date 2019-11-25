@@ -22,14 +22,14 @@ int reservation(int *datecode, int *timekey, int *date_key2, int movie_key) {
 	while (1)
 	{
 		setColor(yellow, black);
-		printf("³¯Â¥¸¦ ÀÔ·ÂÇØÁÖ½Ê½Ã¿À.(ex 20191101) ");
+		printf("â— ì˜ˆë§¤í•  ë‚ ì§œë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”. ex)20191101 : ");
 		setColor(lightgray, black);
 		scanf("%d", &date);
 		cmpdate = date / 100;
 
 		if (cmpdate == *datecode)
 		{
-			*date_key2 = date; // ¿¹¸Å³¯Â¥ÀüÃ¼¸¦ datekey°ª¿¡ ³Ö¾îÁÜ
+			*date_key2 = date; // ì˜ˆë§¤ë‚ ì§œì „ì²´ë¥¼ datekeyê°’ì— ë„£ì–´ì¤Œ
 			system("cls");
 
 			*timekey = reservationtime(count);
@@ -39,84 +39,84 @@ int reservation(int *datecode, int *timekey, int *date_key2, int movie_key) {
 			case 2:
 				if (count[0] >= 9) {
 					system("cls");
-					printf("ÁÂ¼®ÀÌ ¸ÅÁøµÇ¾ú½À´Ï´Ù. ´Ù½Ã ¿¹¸ÅÇØÁÖ¼¼¿ä.\n");
+					printf("ì¢Œì„ì´ ë§¤ì§„ë˜ì—ˆìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì˜ˆë§¤í•´ì£¼ì„¸ìš”.\n");
 					Sleep(1000);
 					continue;
 				}
 				count[0]++;
-				printf("¿¹¸Å°¡ ÁøÇàµË´Ï´Ù.\n");
+				printf("ì˜ˆë§¤ê°€ ì§„í–‰ë©ë‹ˆë‹¤.\n");
 				Sleep(1000);
 				break;
 
 			case 4:
 				if (count[1] >= 9) {
 					system("cls");
-					printf("ÁÂ¼®ÀÌ ¸ÅÁøµÇ¾ú½À´Ï´Ù. ´Ù½Ã ¿¹¸ÅÇØÁÖ¼¼¿ä.\n");
+					printf("ì¢Œì„ì´ ë§¤ì§„ë˜ì—ˆìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì˜ˆë§¤í•´ì£¼ì„¸ìš”.\n");
 					Sleep(1000);
 					continue;
 				}
 				count[1]++;
-				printf("¿¹¸Å°¡ ÁøÇàµË´Ï´Ù.\n");
+				printf("ì˜ˆë§¤ê°€ ì§„í–‰ë©ë‹ˆë‹¤.\n");
 				Sleep(1000);
 				break;
 
 			case 6:
 				if (count[2] >= 9) {
 					system("cls");
-					printf("ÁÂ¼®ÀÌ ¸ÅÁøµÇ¾ú½À´Ï´Ù. ´Ù½Ã ¿¹¸ÅÇØÁÖ¼¼¿ä.\n");
+					printf("ì¢Œì„ì´ ë§¤ì§„ë˜ì—ˆìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì˜ˆë§¤í•´ì£¼ì„¸ìš”.\n");
 					Sleep(1000);
 					continue;
 				}
 				count[2]++;
-				printf("¿¹¸Å°¡ ÁøÇàµË´Ï´Ù.\n");
+				printf("ì˜ˆë§¤ê°€ ì§„í–‰ë©ë‹ˆë‹¤.\n");
 				Sleep(1000);
 				break;
 
 			case 8:
 				if (count[3] >= 9) {
 					system("cls");
-					printf("ÁÂ¼®ÀÌ ¸ÅÁøµÇ¾ú½À´Ï´Ù. ´Ù½Ã ¿¹¸ÅÇØÁÖ¼¼¿ä.\n");
+					printf("ì¢Œì„ì´ ë§¤ì§„ë˜ì—ˆìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì˜ˆë§¤í•´ì£¼ì„¸ìš”.\n");
 					Sleep(1000);
 					continue;
 				}
 				count[3]++;
-				printf("¿¹¸Å°¡ ÁøÇàµË´Ï´Ù.\n");
+				printf("ì˜ˆë§¤ê°€ ì§„í–‰ë©ë‹ˆë‹¤.\n");
 				Sleep(1000);
 				break;
 
 			case 10:
 				if (count[4] >= 9) {
 					system("cls");
-					printf("ÁÂ¼®ÀÌ ¸ÅÁøµÇ¾ú½À´Ï´Ù. ´Ù½Ã ¿¹¸ÅÇØÁÖ¼¼¿ä.\n");
+					printf("ì¢Œì„ì´ ë§¤ì§„ë˜ì—ˆìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì˜ˆë§¤í•´ì£¼ì„¸ìš”.\n");
 					Sleep(1000);
 					continue;
 				}
 				count[4]++;
-				printf("¿¹¸Å°¡ ÁøÇàµË´Ï´Ù.\n");
+				printf("ì˜ˆë§¤ê°€ ì§„í–‰ë©ë‹ˆë‹¤.\n");
 				Sleep(1000);
 				break;
 
 			}
 			setColor(lightred, black);
-			printf("ÁÂ¼®¹øÈ£\n");
+			printf("ì¢Œì„ë²ˆí˜¸\n");
 			printf("a1 a2 a3\n");
 			printf("b4 b5 b6\n");
 			printf("c7 c8 c9\n\n");;
 			setColor(lightgray, black);
-			printf("Àá½Ã¸¸ ±â´Ù·ÁÁÖ¼¼¿ä. °ğ ¿¹¸Å ÆäÀÌÁö·Î ³Ñ¾î°©´Ï´Ù.");
+			printf("ì ì‹œë§Œ ê¸°ë‹¤ë ¤ì£¼ì„¸ìš”. ê³§ ì˜ˆë§¤ í˜ì´ì§€ë¡œ ë„˜ì–´ê°‘ë‹ˆë‹¤.");
 			_sleep(1000);
 			system("cls");
 
-			while (1) {   // ÀÚ¸® ±â´É
+			while (1) {   // ìë¦¬ ê¸°ëŠ¥
 				seatsprint();
 				gotoxy(6, 5);
-				printf("\n¿¹¾àÇÏ½Ã°Ú½À´Ï±î?(Y/N): ");
+				printf("\nì˜ˆì•½í•˜ì‹œê² ìŠµë‹ˆê¹Œ?(Y/N): ");
 				if (getYesNoKey())
 					system("cls");
 				else
 					break;
-				int a = sprint2(); //A,B,C È®ÀÎ Å°
-				int b = sprint3(); //1,2,3 È®ÀÎ Å°
+				int a = sprint2(); //A,B,C í™•ì¸ í‚¤
+				int b = sprint3(); //1,2,3 í™•ì¸ í‚¤
 
 				if (a == 2) {
 					if (b == 2) {
@@ -151,38 +151,38 @@ int reservation(int *datecode, int *timekey, int *date_key2, int movie_key) {
 				SeatsChange(code, &seat_key_a, &seat_key_b, &seat_key_c);
 			}
 
-			if ((*timekey == 2) || (*timekey == 10))// ¿ÀÀüÀÌ³ª ¿ÀÈÄ¿¡ ¼±ÅÃÇÒ °æ¿ì
-				price = payprint_1(seat_key_a, seat_key_b, seat_key_c); // ½Ã°£ÇÒÀÎ ¹ŞÀ» ¶§ °áÁ¦ ÇÔ¼ö
+			if ((*timekey == 2) || (*timekey == 10))// ì˜¤ì „ì´ë‚˜ ì˜¤í›„ì— ì„ íƒí•  ê²½ìš°
+				price = payprint_1(seat_key_a, seat_key_b, seat_key_c); // ì‹œê°„í• ì¸ ë°›ì„ ë•Œ ê²°ì œ í•¨ìˆ˜
 			else
-				price = payprint_2(seat_key_a, seat_key_b, seat_key_c); // ½Ã°£ÇÒÀÎ ¾È ¹ŞÀ» ¶§ °áÁ¦ ÇÔ¼ö
+				price = payprint_2(seat_key_a, seat_key_b, seat_key_c); // ì‹œê°„í• ì¸ ì•ˆ ë°›ì„ ë•Œ ê²°ì œ í•¨ìˆ˜
 
-			printf("\n°áÁ¦ ÇÏ½Ã°Ú½À´Ï±î?(Y/N):");
+			printf("\nê²°ì œ í•˜ì‹œê² ìŠµë‹ˆê¹Œ?(Y/N):");
 			scanf(" %c", &pay);
 			if (pay == 'Y' || pay == 'y')
 			{
-				printf("\n\t<°á Á¦ ¿Ï ·á>\n");
+				printf("\n\t<ê²° ì œ ì™„ ë£Œ>\n");
 				Ticket(movie_key, *timekey, *date_key2, price);
-				printf("\n\tÃ³À½ È­¸éÀ¸·Î µ¹¾Æ°©´Ï´Ù.");
+				printf("\n\tì²˜ìŒ í™”ë©´ìœ¼ë¡œ ëŒì•„ê°‘ë‹ˆë‹¤.");
 				_sleep(1500);
 				system("cls");
 				return price;
 			}
 			else if (pay == 'N' || pay == 'n')
 			{
-				printf(" ³¯Â¥ÀÔ·ÂÀ¸·Î µ¹¾Æ°©´Ï´Ù.\n");
+				printf(" ë‚ ì§œì…ë ¥ìœ¼ë¡œ ëŒì•„ê°‘ë‹ˆë‹¤.\n");
 				_sleep(1200);
 				system("cls");
 			}
 			else
 			{
-				printf("Àß¸øµÈ ÀÔ·Â°ªÀÔ´Ï´Ù. ³¯Â¥ÀÔ·ÂÀ¸·Î µ¹¾Æ°©´Ï´Ù.\n");
+				printf("ì˜ëª»ëœ ì…ë ¥ê°’ì…ë‹ˆë‹¤. ë‚ ì§œì…ë ¥ìœ¼ë¡œ ëŒì•„ê°‘ë‹ˆë‹¤.\n");
 				_sleep(1200);
 				system("cls");
 			}
 		}
 		else
 		{
-			printf("Àß¸øµÈ ³¯Â¥ÀÔ´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.\n");
+			printf("ì˜ëª»ëœ ë‚ ì§œì…ë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.\n");
 			_sleep(1000);
 			system("cls");
 		}
@@ -195,83 +195,83 @@ int SeatsChange(int code, int *seatkey_a, int *seatkey_b, int *seatkey_c) {
 	if (code == 0) {
 		if (seats_num[0][0] == 0) {
 			seats_num[0][0] = 1;
-			printf("A1ÁÂ¼®ÀÇ ¿¹¾àÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+			printf("A1ì¢Œì„ì˜ ì˜ˆì•½ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 			(*seatkey_a)++;
 		}
 		else
-			printf("ÀÌ¹Ì ¿¹¾àµÈ ÁÂ¼®ÀÔ´Ï´Ù. ´Ù½Ã ¼±ÅÃÇØ ÁÖ½Ê½Ã¿À.");
+			printf("ì´ë¯¸ ì˜ˆì•½ëœ ì¢Œì„ì…ë‹ˆë‹¤. ë‹¤ì‹œ ì„ íƒí•´ ì£¼ì‹­ì‹œì˜¤.");
 	}
 	else if (code == 1) {
 		if (seats_num[0][1] == 0) {
 			seats_num[0][1] = 1;
-			printf("A2ÁÂ¼®ÀÇ ¿¹¾àÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+			printf("A2ì¢Œì„ì˜ ì˜ˆì•½ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 			(*seatkey_a)++;
 		}
 		else
-			printf("ÀÌ¹Ì ¿¹¾àµÈ ÁÂ¼®ÀÔ´Ï´Ù. ´Ù½Ã ¼±ÅÃÇØ ÁÖ½Ê½Ã¿À.");
+			printf("ì´ë¯¸ ì˜ˆì•½ëœ ì¢Œì„ì…ë‹ˆë‹¤. ë‹¤ì‹œ ì„ íƒí•´ ì£¼ì‹­ì‹œì˜¤.");
 	}
 	else if (code == 2) {
 		if (seats_num[0][2] == 0) {
 			seats_num[0][2] = 1;
-			printf("A3ÁÂ¼®ÀÇ ¿¹¾àÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+			printf("A3ì¢Œì„ì˜ ì˜ˆì•½ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 			(*seatkey_a)++;
 		}
 		else
-			printf("ÀÌ¹Ì ¿¹¾àµÈ ÁÂ¼®ÀÔ´Ï´Ù. ´Ù½Ã ¼±ÅÃÇØ ÁÖ½Ê½Ã¿À.");
+			printf("ì´ë¯¸ ì˜ˆì•½ëœ ì¢Œì„ì…ë‹ˆë‹¤. ë‹¤ì‹œ ì„ íƒí•´ ì£¼ì‹­ì‹œì˜¤.");
 	}
 	else if (code == 3) {
 		if (seats_num[1][0] == 0) {
 			seats_num[1][0] = 1;
-			printf("B1ÁÂ¼®ÀÇ ¿¹¾àÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+			printf("B1ì¢Œì„ì˜ ì˜ˆì•½ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 			(*seatkey_b)++;
 		}
 		else
-			printf("ÀÌ¹Ì ¿¹¾àµÈ ÁÂ¼®ÀÔ´Ï´Ù. ´Ù½Ã ¼±ÅÃÇØ ÁÖ½Ê½Ã¿À.");
+			printf("ì´ë¯¸ ì˜ˆì•½ëœ ì¢Œì„ì…ë‹ˆë‹¤. ë‹¤ì‹œ ì„ íƒí•´ ì£¼ì‹­ì‹œì˜¤.");
 	}
 	else if (code == 4) {
 		if (seats_num[1][1] == 0) {
 			seats_num[1][1] = 1;
-			printf("B2ÁÂ¼®ÀÇ ¿¹¾àÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+			printf("B2ì¢Œì„ì˜ ì˜ˆì•½ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 			(*seatkey_b)++;
 		}
 		else
-			printf("ÀÌ¹Ì ¿¹¾àµÈ ÁÂ¼®ÀÔ´Ï´Ù. ´Ù½Ã ¼±ÅÃÇØ ÁÖ½Ê½Ã¿À.");
+			printf("ì´ë¯¸ ì˜ˆì•½ëœ ì¢Œì„ì…ë‹ˆë‹¤. ë‹¤ì‹œ ì„ íƒí•´ ì£¼ì‹­ì‹œì˜¤.");
 	}
 	else if (code == 5) {
 		if (seats_num[1][2] == 0) {
 			seats_num[1][2] = 1;
-			printf("B3ÁÂ¼®ÀÇ ¿¹¾àÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+			printf("B3ì¢Œì„ì˜ ì˜ˆì•½ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 			(*seatkey_b)++;
 		}
 		else
-			printf("ÀÌ¹Ì ¿¹¾àµÈ ÁÂ¼®ÀÔ´Ï´Ù. ´Ù½Ã ¼±ÅÃÇØ ÁÖ½Ê½Ã¿À.");
+			printf("ì´ë¯¸ ì˜ˆì•½ëœ ì¢Œì„ì…ë‹ˆë‹¤. ë‹¤ì‹œ ì„ íƒí•´ ì£¼ì‹­ì‹œì˜¤.");
 	}
 	else if (code == 6) {
 		if (seats_num[2][0] == 0) {
 			seats_num[2][0] = 1;
-			printf("C1ÁÂ¼®ÀÇ ¿¹¾àÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+			printf("C1ì¢Œì„ì˜ ì˜ˆì•½ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 			(*seatkey_c)++;
 		}
 		else
-			printf("ÀÌ¹Ì ¿¹¾àµÈ ÁÂ¼®ÀÔ´Ï´Ù. ´Ù½Ã ¼±ÅÃÇØ ÁÖ½Ê½Ã¿À.");
+			printf("ì´ë¯¸ ì˜ˆì•½ëœ ì¢Œì„ì…ë‹ˆë‹¤. ë‹¤ì‹œ ì„ íƒí•´ ì£¼ì‹­ì‹œì˜¤.");
 	}
 	else if (code == 7) {
 		if (seats_num[2][1] == 0) {
 			seats_num[2][1] = 1;
-			printf("C2ÁÂ¼®ÀÇ ¿¹¾àÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+			printf("C2ì¢Œì„ì˜ ì˜ˆì•½ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 			(*seatkey_c)++;
 		}
 		else
-			printf("ÀÌ¹Ì ¿¹¾àµÈ ÁÂ¼®ÀÔ´Ï´Ù. ´Ù½Ã ¼±ÅÃÇØ ÁÖ½Ê½Ã¿À.");
+			printf("ì´ë¯¸ ì˜ˆì•½ëœ ì¢Œì„ì…ë‹ˆë‹¤. ë‹¤ì‹œ ì„ íƒí•´ ì£¼ì‹­ì‹œì˜¤.");
 	}
 	else if (code == 8) {
 		if (seats_num[2][2] == 0) {
 			seats_num[2][2] = 1;
-			printf("C3ÁÂ¼®ÀÇ ¿¹¾àÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+			printf("C3ì¢Œì„ì˜ ì˜ˆì•½ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 			(*seatkey_c)++;
 		}
 		else
-			printf("ÀÌ¹Ì ¿¹¾àµÈ ÁÂ¼®ÀÔ´Ï´Ù. ´Ù½Ã ¼±ÅÃÇØ ÁÖ½Ê½Ã¿À.");
+			printf("ì´ë¯¸ ì˜ˆì•½ëœ ì¢Œì„ì…ë‹ˆë‹¤. ë‹¤ì‹œ ì„ íƒí•´ ì£¼ì‹­ì‹œì˜¤.");
 	}
 }
 
@@ -283,15 +283,15 @@ int payprint_1(int seatnum_a, int seatnum_b, int seatnum_c)
 
 	system("cls");
 	gotoxy(2, 2);
-	printf("<°áÁ¦ ³»¿ë>");
+	printf("<ê²°ì œ ë‚´ìš©>");
 	gotoxy(2, 4);
-	printf("¿ø·¡ ±İ¾×: %d", TIMESALE_ORIGINAL_PRICE(seatnum_a, seatnum_b, seatnum_c));
+	printf("ì›ë˜ ê¸ˆì•¡: %d", TIMESALE_ORIGINAL_PRICE(seatnum_a, seatnum_b, seatnum_c));
 	gotoxy(2, 5);
-	printf("ÇÒÀÎ ±İ¾×: %d", TIMESALE_SALEPRICE_PRICE(seatnum_a, seatnum_b, seatnum_c));
+	printf("í• ì¸ ê¸ˆì•¡: %d", TIMESALE_SALEPRICE_PRICE(seatnum_a, seatnum_b, seatnum_c));
 	gotoxy(2, 6);
 	printf("-----------------");
 	gotoxy(2, 7);
-	printf("ÃÖÁ¾ ±İ¾×: %d", TIMESALE_FINALPRICE_PRICE(seatnum_a, seatnum_b, seatnum_c));
+	printf("ìµœì¢… ê¸ˆì•¡: %d", TIMESALE_FINALPRICE_PRICE(seatnum_a, seatnum_b, seatnum_c));
 
 	return TIMESALE_FINALPRICE_PRICE(seatnum_a, seatnum_b, seatnum_c);
 }
@@ -304,15 +304,15 @@ int payprint_2(int seatnum_a, int seatnum_b, int seatnum_c)
 
 	system("cls");
 	gotoxy(2, 2);
-	printf("<°áÁ¦ ³»¿ë>");
+	printf("<ê²°ì œ ë‚´ìš©>");
 	gotoxy(2, 4);
-	printf("¿ø·¡ ±İ¾×: %d", SEATSALE_ORIGINAL_PRICE(seatnum_a, seatnum_b, seatnum_c));
+	printf("ì›ë˜ ê¸ˆì•¡: %d", SEATSALE_ORIGINAL_PRICE(seatnum_a, seatnum_b, seatnum_c));
 	gotoxy(2, 5);
-	printf("ÇÒÀÎ ±İ¾×: %d", SEATSALE_SALEPRICE_PRICE(seatnum_a, seatnum_b, seatnum_c));
+	printf("í• ì¸ ê¸ˆì•¡: %d", SEATSALE_SALEPRICE_PRICE(seatnum_a, seatnum_b, seatnum_c));
 	gotoxy(2, 6);
 	printf("-----------------");
 	gotoxy(2, 7);
-	printf("ÃÖÁ¾ ±İ¾×: %d", SEATSALE_FINALPRICE_PRICE(seatnum_a, seatnum_b, seatnum_c));
+	printf("ìµœì¢… ê¸ˆì•¡: %d", SEATSALE_FINALPRICE_PRICE(seatnum_a, seatnum_b, seatnum_c));
 
 	return SEATSALE_FINALPRICE_PRICE(seatnum_a, seatnum_b, seatnum_c);
 }
@@ -329,7 +329,7 @@ int dateprint()
 	int chk = 0;
 	int basicyear[12] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
 	setColor(yellow, black);
-	printf("¡Ü ¿¹¸ÅÇÒ ³âµµ¿Í ´ŞÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä. ex)2019 11 : ");
+	printf("â— ì˜ˆë§¤í•  ë…„ë„ì™€ ë‹¬ì„ ì…ë ¥í•´ì£¼ì„¸ìš”. ex)2019 11 : ");
 	setColor(lightgray, black);
 	scanf("%d %d", &year, &month);
 
@@ -399,7 +399,7 @@ int reservationtime(int count[])
 
 	gotoxy(x, y - 2);
 	setColor(yellow, black);
-	printf("¡Ü °ü¶÷ÇÏ½Ç ½Ã°£´ë¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.\n");
+	printf("â— ê´€ëŒí•˜ì‹¤ ì‹œê°„ëŒ€ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.\n");
 	setColor(lightgray, black);;
 	gotoxy(x, y);
 	printf("> *8:30 (%d/9)", count[0]);
@@ -476,14 +476,14 @@ int movieselect(int i)
 		system("cls");
 		gotoxy(x, y);
 		setColor(yellow, black);
-		printf(":*:*:*:*:*:¿¹¸ÅÇÒ ¿µÈ­¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä*:*:*:*:*:\n");
+		printf(":*:*:*:*:*:ì˜ˆë§¤í•  ì˜í™”ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”*:*:*:*:*:\n");
 		setColor(lightgray, black);
 		gotoxy(x, y + 1);
-		printf(">1.°Ü¿ï¿Õ±¹\n");
+		printf(">1.ê²¨ìš¸ì™•êµ­\n");
 		gotoxy(x, y + 2);
-		printf(" 2. ºí·¢¸Ó´Ï\n");
+		printf(" 2. ë¸”ë™ë¨¸ë‹ˆ\n");
 		gotoxy(x, y + 3);
-		printf(" 3. ½ÅÀÇÇÑ¼ö2\n");
+		printf(" 3. ì‹ ì˜í•œìˆ˜2\n");
 
 		while (1) {
 			int n = keyControl();
@@ -522,11 +522,11 @@ int getYesNoKey(void) {
 	while ((key = getch()) != NULL) {
 		if (key == 'y' || key == 'Y') {
 			printf("Y");
-			return 1; // ÂüÀ» ¹İÈ¯
+			return 1; // ì°¸ì„ ë°˜í™˜
 		}
 		else if (key == 'n' || key == 'N') {
 			printf("N");
-			return 0; // °ÅÁşÀ» ¹İÈ¯
+			return 0; // ê±°ì§“ì„ ë°˜í™˜
 		}
 	}
 	return -1;
@@ -619,8 +619,8 @@ int sprint3() {
 }
 
 int seatsprint() {
-	char A[3] = { 'A','B','C' }; //¾ËÆÄÆê Ãâ·Â
-	int d[3] = { 1,2,3 };         //¼ıÀÚ Ãâ·Â
+	char A[3] = { 'A','B','C' }; //ì•ŒíŒŒí« ì¶œë ¥
+	int d[3] = { 1,2,3 };         //ìˆ«ì ì¶œë ¥
 	int x = 3;
 	int y = 2;
 	gotoxy(x, y);
@@ -662,52 +662,52 @@ int seatsprint() {
 void Ticket(int moviekey, int timekey, int date, int price)
 {
 	system("cls");
-	printf("\n\t<¡ØÆ¼ÄÏÁ¤º¸¡Ø> \n\n");
-	printf("\t¡Ü¿µÈ­Á¤º¸¡Ü\n");
+	printf("\n\t<â€»í‹°ì¼“ì •ë³´â€»> \n\n");
+	printf("\tâ—ì˜í™”ì •ë³´â—\n");
 	switch (moviekey)
 	{
 	case 1:
-		printf("¢º¿¹¸Å¿µÈ­:Frozen 2\n");
+		printf("â–¶ì˜ˆë§¤ì˜í™”:Frozen 2\n");
 		break;
 	case 2:
-		printf("¢º¿¹¸Å¿µÈ­: BLACK MONEY\n");
+		printf("â–¶ì˜ˆë§¤ì˜í™”: BLACK MONEY\n");
 		break;
 	case 3:
-		printf("¢º¿¹¸Å¿µÈ­: The Divine Move 2 \n");
+		printf("â–¶ì˜ˆë§¤ì˜í™”: The Divine Move 2 \n");
 		break;
 	default:
 		break;
 	}
-	printf("¢º°ü¶÷ÀÏ: %d\n", date); // ³¯Â¥ ( 20191120 Ã³·³ 8ÀÚ¸®·Î Ç¥½Ã)
+	printf("â–¶ê´€ëŒì¼: %d\n", date); // ë‚ ì§œ ( 20191120 ì²˜ëŸ¼ 8ìë¦¬ë¡œ í‘œì‹œ)
 	switch (timekey)
 	{
 	case 0:
-		printf("¢º°ü¶÷½Ã°£: 8:30 - 10:30\n");
+		printf("â–¶ê´€ëŒì‹œê°„: 8:30 - 10:30\n");
 		break;
 	case 2:
-		printf("¢º°ü¶÷½Ã°£: 8:30 - 10:30\n");
+		printf("â–¶ê´€ëŒì‹œê°„: 8:30 - 10:30\n");
 		break;
 	case 4:
-		printf("¢º°ü¶÷½Ã°£: 8:30 - 10:30\n");
+		printf("â–¶ê´€ëŒì‹œê°„: 8:30 - 10:30\n");
 		break;
 	case 6:
-		printf("¢º°ü¶÷½Ã°£: 8:30 - 10:30\n");
+		printf("â–¶ê´€ëŒì‹œê°„: 8:30 - 10:30\n");
 		break;
 	case 8:
-		printf("¢º°ü¶÷½Ã°£: 8:30 - 10:30\n");
+		printf("â–¶ê´€ëŒì‹œê°„: 8:30 - 10:30\n");
 		break;
 	case 10:
-		printf("¢º°ü¶÷½Ã°£: 8:30 - 10:30\n");
+		printf("â–¶ê´€ëŒì‹œê°„: 8:30 - 10:30\n");
 		break;
 	default:
 		break;
-	} // ¼±ÅÃÇÑ ¿µÈ­¿Í °ü¶÷ÀÏ, °ü¶÷½Ã°£Ç¥½Ã! ( Ãß°¡ÀûÀ¸·Î ÀÚ¸®Ç¥½Ã ÇÊ¿ä!)
+	} // ì„ íƒí•œ ì˜í™”ì™€ ê´€ëŒì¼, ê´€ëŒì‹œê°„í‘œì‹œ! ( ì¶”ê°€ì ìœ¼ë¡œ ìë¦¬í‘œì‹œ í•„ìš”!)
 
-	printf("\n\t¡Ü°áÁ¦ Á¤º¸¡Ü\n\n");
-	printf("¢º°áÁ¦ ±İ¾×: %d", price);
+	printf("\n\tâ—ê²°ì œ ì •ë³´â—\n\n");
+	printf("â–¶ê²°ì œ ê¸ˆì•¡: %d", price);
 
-	printf("\n\t¡Ü¿¹¸Å¹øÈ£¡Ü\n\n");
-	printf("¢º%d", date * 100 + 1);
+	printf("\n\tâ—ì˜ˆë§¤ë²ˆí˜¸â—\n\n");
+	printf("â–¶%d", date * 100 + 1);
 	_sleep(4000);
 
 
