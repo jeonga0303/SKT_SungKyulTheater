@@ -689,23 +689,20 @@ void Ticket(int moviekey, int timekey, int date, int price)
 	printf("▶관람일: %d\n", date); // 날짜 ( 20191120 처럼 8자리로 표시)
 	switch (timekey)
 	{
-	case 0:
-		printf("▶관람시간: 8:30 - 10:30\n");
-		break;
 	case 2:
-		printf("▶관람시간: 8:30 - 10:30\n");
+		printf("▶관람시작시간: 8:30\n");
 		break;
 	case 4:
-		printf("▶관람시간: 8:30 - 10:30\n");
+		printf("▶관람시작시간: 11:30\n");
 		break;
 	case 6:
-		printf("▶관람시간: 8:30 - 10:30\n");
+		printf("▶관람시작시간: 15:30\n");
 		break;
 	case 8:
-		printf("▶관람시간: 8:30 - 10:30\n");
+		printf("▶관람시작시간: 18:30\n");
 		break;
 	case 10:
-		printf("▶관람시간: 8:30 - 10:30\n");
+		printf("▶관람시작시간: 22:00\n");
 		break;
 	default:
 		break;
