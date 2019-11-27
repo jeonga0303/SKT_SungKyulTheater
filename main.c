@@ -37,12 +37,18 @@ int main() {
 		}
 
 		if (menucode == 1) {   //티켓예매  출력
-			printf("예매번호를 입력해 주십시오.(ex2019111601):");;
+			setColor(yellow, black);
+			printf("예매번호를 입력해 주십시오.(ex2019111601):");
+			setColor(lightgray, black);
 			scanf("%d", &Adnumber);
 			if (Adnumber == datekey2 * 100 + 1)
 				Ticket(moviekey, timekey, datekey2, price);
-			else
+			else {
+
+				setColor(lightred, black);
 				printf("\n예매번호가 잘못되었습니다. 처음 화면으로 돌아갑니다.");
+				setColor(lightgray, black);
+			}
 			_sleep(1000);
 
 		}
