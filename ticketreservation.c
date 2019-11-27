@@ -98,19 +98,21 @@ int reservation(int *datecode, int *timekey, int *date_key2, int movie_key) {
 
 			}
 			setColor(lightred, black);
-			printf("좌석번호\n");
+			printf("좌석번호입니다...\n");
 			printf("a1 a2 a3\n");
 			printf("b4 b5 b6\n");
 			printf("c7 c8 c9\n\n");;
 			setColor(lightgray, black);
-			printf("잠시만 기다려주세요. 곧 예매 페이지로 넘어갑니다.");
+			printf("잠시만 기다려주세요. 곧 예매 페이지로 넘어갑니다...");
 			_sleep(1000);
 			system("cls");
 
 			while (1) {   // 자리 기능
 				seatsprint();
 				gotoxy(6, 5);
-				printf("\n예약하시겠습니까?(Y/N): ");
+				setColor(yellow, black);
+				printf("\n좌석을 예약하시겠습니까?(Y/N): ");
+				setColor(lightgray, black);
 				if (getYesNoKey())
 					system("cls");
 				else
@@ -283,6 +285,7 @@ int payprint_1(int seatnum_a, int seatnum_b, int seatnum_c)
 
 	system("cls");
 	gotoxy(2, 2);
+	setColor(cyan, black);
 	printf("<결제 내용>");
 	gotoxy(2, 4);
 	printf("원래 금액: %d", TIMESALE_ORIGINAL_PRICE(seatnum_a, seatnum_b, seatnum_c));
@@ -292,6 +295,7 @@ int payprint_1(int seatnum_a, int seatnum_b, int seatnum_c)
 	printf("-----------------");
 	gotoxy(2, 7);
 	printf("최종 금액: %d", TIMESALE_FINALPRICE_PRICE(seatnum_a, seatnum_b, seatnum_c));
+	setColor(lightgray, black);
 
 	return TIMESALE_FINALPRICE_PRICE(seatnum_a, seatnum_b, seatnum_c);
 }
@@ -304,6 +308,7 @@ int payprint_2(int seatnum_a, int seatnum_b, int seatnum_c)
 
 	system("cls");
 	gotoxy(2, 2);
+	setColor(cyan, black);
 	printf("<결제 내용>");
 	gotoxy(2, 4);
 	printf("원래 금액: %d", SEATSALE_ORIGINAL_PRICE(seatnum_a, seatnum_b, seatnum_c));
@@ -313,6 +318,7 @@ int payprint_2(int seatnum_a, int seatnum_b, int seatnum_c)
 	printf("-----------------");
 	gotoxy(2, 7);
 	printf("최종 금액: %d", SEATSALE_FINALPRICE_PRICE(seatnum_a, seatnum_b, seatnum_c));
+	setColor(lightgray, black);
 
 	return SEATSALE_FINALPRICE_PRICE(seatnum_a, seatnum_b, seatnum_c);
 }
@@ -479,7 +485,7 @@ int movieselect(int i)
 		printf(":*:*:*:*:*:예매할 영화를 선택해주세요*:*:*:*:*:\n");
 		setColor(lightgray, black);
 		gotoxy(x, y + 1);
-		printf(">1.겨울왕국\n");
+		printf(">1.겨울왕국2\n");
 		gotoxy(x, y + 2);
 		printf(" 2. 블랙머니\n");
 		gotoxy(x, y + 3);
@@ -662,7 +668,9 @@ int seatsprint() {
 void Ticket(int moviekey, int timekey, int date, int price)
 {
 	system("cls");
+	setColor(yellow, black);
 	printf("\n\t<※티켓정보※> \n\n");
+	setColor(cyan, black);
 	printf("\t●영화정보●\n");
 	switch (moviekey)
 	{
