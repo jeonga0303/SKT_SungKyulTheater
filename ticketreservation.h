@@ -1,6 +1,6 @@
-#ifndef RESERVATION_H
-#define RESERVATION_H
- 
+#ifndef TICKETPRICE
+#define TICKETPRICE
+
 #define PRICE 10000
 #define TIMESALE 3000
 #define SEATSALE 1000
@@ -10,26 +10,73 @@
 #define TIMESALE_SALEPRICE_PRICE(x,y,z) ((x*(TIMESALE+(2*SEATSALE)))+(y*(TIMESALE+SEATSALE))+(z*TIMESALE))
 #define TIMESALE_FINALPRICE_PRICE(x,y,z) (((x+y+z)*PRICE)-((x*(TIMESALE+(2*SEATSALE)))+(y*(TIMESALE+SEATSALE))+(z*TIMESALE)))
 
-
 #define SEATSALE_ORIGINAL_PRICE(x,y,z)  ((x + y +z) * (PRICE))
 #define SEATSALE_SALEPRICE_PRICE(x,y,z) ((x*2*SEATSALE)+(y*SEATSALE))
 #define SEATSALE_FINALPRICE_PRICE(x,y,z) (((x+y+z)*PRICE)-((x*2*SEATSALE)+(y*SEATSALE)))
 
-
+int payprint_1(int, int, int);        //ì¡°ì¡°(ì‹œê°„)í• ì¸ì´ë‘ ì¢Œì„í• ì¸ í•¨ìˆ˜,reservation í¬í•¨
+int payprint_2(int, int, int);        //ì¢Œì„í• ì¸ í•¨ìˆ˜,reservation í¬í•¨
 #endif
 
-int isyoon(int a);                     //´Ş·Â À±´Ş¼¼ÁÖ´Â ÇÔ¼ö(dateprint¿¡ Æ÷ÇÔ)
-int dateprint();                       //´Ş·ÂÃâ·Â (main)
-int movieselect(int);                 //¿µÈ­ ¿¹¸ÅÇÒ¶§ Ãâ·ÂµÇ´Â ¿µÈ­ (main.c¿¡ ¼±¾ğ)
-int reservationtime(int);           //¿µÈ­½Ã°£Ãâ·Â (reservation¿¡ Æ÷ÇÔ)
-void Ticket(int, int, int, int);        //Æ¼ÄÏ ¿µ¼öÁõ Ãâ·ÂÇÔ¼ö (reservarionÆ÷ÇÔ)
-int getYesNoKey(void);             //¿¹,¾Æ´Ï¿À°ª (reservation,movieinformation¿¡ Æ÷ÇÔ)
-int SeatsChange(int, int, int, int); //ÀÚ¸® 0->1 ¹Ù²ãÁÖ´Â°Í (reservation¿¡ Æ÷ÇÔ)
-int sprint2();                           //reservation  A,B,C°ª
-int sprint3();                          //reservation   1,2,3°ª
-int payprint_1(int, int, int);        //Á¶Á¶(½Ã°£)ÇÒÀÎÀÌ¶û ÁÂ¼®ÇÒÀÎ ÇÔ¼ö,reservation Æ÷ÇÔ
-int payprint_2(int, int, int);        //ÁÂ¼®ÇÒÀÎ ÇÔ¼ö,reservation Æ÷ÇÔ
-int seatsprint();                      //ÁÂ¼®Ç¥ÀüÃ¼Ãâ·Â reservation Æ÷ÇÔ
+#ifndef FROZEN2
+#define FROZEN2
+#define SIZE 5
+
+int count1[SIZE] = { 0 };
+int seats_num1[3][3] = { 0 };
+int ticket1;
+int date1;
+
+int reservation1(int *timekey1); //ì˜ˆì•½í•¨ìˆ˜
+int reservationtime1();                                                                            //ì˜í™”ì‹œê°„ì¶œë ¥
+int seatsprint1();                                                                                  //ì¢Œì„í‘œì „ì²´ì¶œë ¥ 
+int seattotal1(int *seatkey_a, int *seatkey_b, int *seatkey_c);                             //ì¢Œì„ë³€í™˜
+int dateprint1();                       //ë‹¬ë ¥ì¶œë ¥ 
+#endif
+
+#ifndef BLACKMONEY
+#define BLACKMONEY
+
+int count2[SIZE] = { 0 };
+int seats_num2[3][3] = { 0 };
+int ticket2;
+int date2;
+
+int reservation2(int *timekey2);
+int reservationtime2();
+int seatsprint2();
+int seattotal2(int *seatkey_a, int *seatkey_b, int *seatkey_c);
+int dateprint2();                       //ë‹¬ë ¥ì¶œë ¥ 
+#endif
+
+#ifndef THEDIVINEMOVE2
+#define THEDIVINEMOVE2
+
+int count3[SIZE] = { 0 };
+int seats_num3[3][3] = { 0 };
+int ticket3;
+int date3;
+
+int reservation3(int *timekey3);
+int reservationtime3();
+int seattotal3(int *seatkey_a, int *seatkey_b, int *seatkey_c);
+int seatsprint3();
+int dateprint3();                       //ë‹¬ë ¥ì¶œë ¥ 
+#endif
+
+#ifndef SEAT_HAMSU
+#define SEAT_HAMSU
+
+enum seats { A1, A2, A3, B1, B2, B3, C1, C2, C3 };
+enum seats code;
+int sprint1();                           //A,B,C ì…ë ¥
+int sprint2();                          //1,2,3 ì…ë ¥
+#endif
 
 
+int yoon(int a);                       //ë‹¬ë ¥ ìœ¤ë‹¬ì„¸ì£¼ëŠ” í•¨ìˆ˜
 
+
+void Ticket();
+int movieselect(int);                   //ì˜í™” ì˜ˆë§¤í• ë•Œ ì¶œë ¥ë˜ëŠ” ì˜í™” 
+int getYesNoKey(void);             //ì˜ˆ,ì•„ë‹ˆì˜¤ê°’
