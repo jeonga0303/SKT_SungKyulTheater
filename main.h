@@ -47,7 +47,11 @@
 #ifndef SET_COLOR
 #define SET_COLOR
 
-int setColor();                         //¹è°æ»ö ¹Ù²ãÁÖ´Â ÇÔ¼ö
+int setColor();                         //배경색 바꿔주는 함수
 enum { black, blue, green, cyan, red, purple, brown, lightgray, darkgray, lightblue, lightgreen, lightcyan, lightred, lightpurple, yellow, white };
 
 #endif
+
+int moviekey;
+int rescode;
+int timekey;
